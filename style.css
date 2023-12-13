@@ -1,0 +1,265 @@
+body {
+    font-size: 0.9rem;
+}
+
+img {
+    display: block;
+}
+
+
+.icon {
+    width: 25px;
+
+}
+.btn-secondary{
+    background-color: #1AC4E3;
+    border:none;
+}
+.dropdown-menu {
+    right: 0;
+    left: unset!important;
+    @media(max-width:767px) {
+        border: none;
+        background-color: transparent;
+    }
+}
+
+.dropdown-toggle::after {
+    font-family: 'Font Awesome 5 Free';
+    content: "\f107";
+    /* angle-down */
+    font-weight: 900;
+    border: 0;
+    vertical-align: unset;
+}
+
+.dropdown-toggle.noarrow {
+    &::after {
+        display: none;
+    }
+}
+
+.dropdown-toggle.profile {
+    /* a circle with 30 width and aspect ratio 1, background black */
+    border-radius: 50%;
+    background-color: #111111;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    display: grid;
+    place-content: center;
+    font-size: 0.8rem;
+    padding: 5px;
+
+
+}
+
+.navbar-nav--icons {
+    /* background-color: red; */
+    /* position: absolute; */
+    left: 50%;
+    top: 7px;
+    transform: translateX(-50%);
+    flex-direction: row;
+    list-style: none;
+    width: fit-content;
+    z-index: 1;
+    @media(min-width:767px) {
+        top: 50%;
+        transform: translateY(-50%);
+        right: 12px;
+        left: unset;
+        transform: translateX(unset);
+    }
+}
+
+.banner {
+    background: url(images/house-pic.jpg) no-repeat center/cover;
+    min-height: 40dvh;
+}
+
+.carousel-indicators [data-bs-target] {
+    height: 40px;
+    width: 200px;
+    margin: auto;
+    display: grid;
+    place-content: center;
+    text-indent: unset;
+    /* width: ;     */
+    @media(max-width:767px){
+        display: none;
+        &.active{
+            display: grid;
+    
+        }
+    }
+}
+
+.carousel-indicators li::marker {
+    font-size: 0;
+}
+
+.carousel-item {
+    background-color: #cccccc3b;
+    height: 40dvh;
+
+    /* width: 1000px; */
+    &.active {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+.carousel-caption {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: max-content;
+    background: #cae5ed;
+    color: #000;
+    /* padding: 10px; */
+    place-content: center;
+    right: unset;
+    bottom: unset;
+    @media(max-width:767px){
+        width: 90%;
+    }
+}
+
+/* product order section */
+.product-order {
+    background-color: #f9f9f9
+}
+
+/* stepper css */
+/* Add your custom styles here */
+.stepper {
+    display: flex;
+    @media(min-width:768px){
+        flex-direction: column;
+    }
+}
+
+.step {
+    position: relative;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.step.active {
+    background-color: #000;
+    color: white;
+}
+
+.completed {
+    background-color: black;
+    color: white;
+}
+
+.connector {
+    height: 30px;
+    width: 3px;
+    background-color: #000;
+    margin: 0 auto;
+    @media(max-width:767px){
+        transform: rotate(90deg);
+    }
+}
+
+.step-content {
+    display: none;
+    background-color: #fff;
+}
+
+.step-content.active {
+    display: block;
+}
+.action-link{
+    text-decoration: none;
+    @media(max-width:767px){
+        display: block;
+    }
+}
+.accordion-button {
+    box-shadow: none !important;
+    /* font-size: 1.3rem;
+    font-weight: 500; */
+
+    &::after {
+        font-family: "Font Awesome 5 Free";
+        content: '\f067';
+        /* Plus icon for closed state (fa-plus) */
+        font-weight: 900;
+        background-image: none;
+
+    }
+}
+
+/* accordion icon change to plus and minus */
+.accordion-button:not(.collapsed)::after {
+    content: '\f068';
+    /* Minus icon for open state (fa-minus) */
+    background-image: none;
+
+}
+
+/* rating css */
+/* Add your custom styles here */
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    cursor: pointer;
+    /* width: 40px;
+    height: 40px;
+    margin: 0 5px;
+    border-radius: 50%; */
+}
+
+.rating label:before {
+    content: '\2605';
+    /* Star symbol */
+    font-size: 40px;
+    color: #ccc;
+    /* Inactive star color (grey) */
+}
+
+.rating input:checked~label {}
+
+.rating input:checked~label:before {
+    color: gold;
+    /* Color for active star */
+}
+
+span.info {
+    background-color: #000;
+    color: #fff;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    display: inline-flex;
+    vertical-align: middle;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+button.nav-link {
+    @media(max-width:500px){
+        font-size: 0.75rem;
+    }
+}
